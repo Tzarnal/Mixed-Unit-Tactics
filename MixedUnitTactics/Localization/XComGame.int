@@ -95,3 +95,101 @@ LocPromotionPopupText="<font color='#CA7200'>LEVEL I</font> (gained at <Ability:
 ListTitle = "Armiger Class"
 DescriptionTitle = "Armiger Class"
 DescriptionEntry = "Soldiers who specialize in getting the most of out unique and special weapons"
+
+;///////////////////////////
+;    Vulcan
+;///////////////////////////
+[MUT_Vulcan X2SoldierClassTemplate]
+DisplayName = "Vulcan"
+ClassSummary = "Entrenched Cannoneers who prefer fire damage and protect themselves or their allies with Overwatch fire and prepared explosives.<br/><br/><font color='#CA7200'>Primary weapons: Cannons. Secondary Weapon: Claymores.</font>"
++AbilityTreeTitles = "Enfilade"
++AbilityTreeTitles = "Trench Warfare"
++AbilityTreeTitles = "Minefield"
++AbilityTreeTitles = "XCOM"
+
++RankIcons[0]="UILibrary_Common.rank_rookie"
++RankIcons[1]="UILibrary_WOTC_APA_Class_Pack.ranks_Squaddie_Level1"
++RankIcons[2]="UILibrary_WOTC_APA_Class_Pack.ranks_Corporal_Level1"
++RankIcons[3]="UILibrary_WOTC_APA_Class_Pack.ranks_Sergeant_Level2"
++RankIcons[4]="UILibrary_WOTC_APA_Class_Pack.ranks_Lieutenant_Level2"
++RankIcons[5]="UILibrary_WOTC_APA_Class_Pack.ranks_Captain_Level2"
++RankIcons[6]="UILibrary_WOTC_APA_Class_Pack.ranks_Major_Level3"
++RankIcons[7]="UILibrary_WOTC_APA_Class_Pack.ranks_Colonel_Level3"
+
++RandomNickNames = "Blitz"
++RandomNickNames = "Brick"
++RandomNickNames = "Butcher"
++RandomNickNames = "Buzzsaw"
++RandomNickNames = "Cajun"
++RandomNickNames = "Chops"
++RandomNickNames = "Cobra"
++RandomNickNames = "Crash"
++RandomNickNames = "Diamond"
++RandomNickNames = "Enforcer"
++RandomNickNames = "Flash"
++RandomNickNames = "Fury"
++RandomNickNames = "Gator"
++RandomNickNames = "Icepick"
++RandomNickNames = "Jaws"
++RandomNickNames = "Knuckles"
++RandomNickNames = "Monster"
++RandomNickNames = "Mustang"
++RandomNickNames = "Pitbull"
++RandomNickNames = "Predator"
++RandomNickNames = "Razor"
++RandomNickNames = "Roman"
++RandomNickNames = "Samurai"
++RandomNickNames = "Scorpion"
++RandomNickNames = "Shogun"
++RandomNickNames = "Slayer"
++RandomNickNames = "Steel"
++RandomNickNames = "Terminator"
++RandomNickNames = "Thane"
++RandomNickNames = "Trojan"
++RandomNickNames = "Vandal"
++RandomNickNames = "Viking"
++RandomNickNames = "Warden"
++RandomNickNames = "Warlord"
++RandomNickNames = "Wolf"
++RandomNickNames = "Wolverine"
++RandomNicknames_Female = "Athena"
++RandomNicknames_Female = "Iron Maiden"
++RandomNicknames_Female = "Shieldmaiden"
++RandomNicknames_Female = "Valkyrie"
++RandomNicknames_Female = "Godmother"
++RandomNickNames_Male = "Axeman"
++RandomNickNames_Male = "Rocky"
++RandomNickNames_Male = "Stallion"
++RandomNickNames_Male = "Wolfman"
+
++PhotoboothSoloBLines_Female = "Close quarters, no mercy."
++PhotoboothSoloBLines_Female = "Her blade will bring JUSTICE!"
++PhotoboothSoloBLines_Female = "Close, Personal, and DEADLY!"
+
++PhotoboothSoloBLines_Male = "Close quarters, no mercy."
++PhotoboothSoloBLines_Male = "His blade will bring JUSTICE!"
++PhotoboothSoloBLines_Male = "Close, Personal, and DEADLY!"
+
+; - GTS Unlocks -
+
+[MUT_Vulcan_Unlock1 X2SoldierAbilityUnlockTemplate]
+DisplayName = "Vulcan: Prepared Position I"
+Summary = "All Vulcan soldiers' Continuous Fire proficiency will now start at level 2, regardless of rank."
+
+[MUT_Vulcan_Unlock2 X2SoldierAbilityUnlockTemplate]
+DisplayName = "Vulcan: Prepared Position II"
+Summary = "All Vulcan soldiers' Continuous Fire proficiency will now start at level 3, regardless of rank.<br/><br/><font color='#CA7200'>Requires Prepared Position I</font>"
+
+; - Core Ability - 
+[MUT_VulcanCore X2AbilityTemplate]
+LocFriendlyName = "Continuous Fire"
+LocHelpText = "Long nights at the firing range increased the Armigers ability to handle their weapon."
+LocLongDescription = "Long nights at the firing range increased the Armigers ability to handle their weapon."
+LocPromotionPopupText="<font color='#CA7200'>LEVEL I</font> (gained at <Ability:RANKNAME1/> rank [1])<br/><Bullet/> Running On Empty - The <Ability:ClassName/> Reloads one ammo if they move while out of ammo. Only once a turn. <br/><Bullet/> Gain <font color='#3ABD23'>+5</font> Aim. <br/><br/><font color='#CA7200'>LEVEL II</font> (gained at <Ability:RANKNAME3/> rank [3])<br/><Bullet/> Nimble Hands - As a free action, reload your weapon. Can be used every 3 turns. <br/><Bullet/> Gain <font color='#3ABD23'>+5</font> Aim. <br/><br/><font color='#CA7200'>LEVEL III</font> (gained at <Ability:RANKNAME6/> rank [6])<br/><Bullet/> Weapon Specialist - Gain +1 Primary weapon and Pistol Damage.<br/><Bullet/> Gain <font color='#3ABD23'>+5</font> Aim."
+
+; - Encyclopedia Entry -
+
+[MUT_Vulcan X2EncyclopediaTemplate]
+ListTitle = "Vulcan Class"
+DescriptionTitle = "Vulcan Class"
+DescriptionEntry = "Entrenched Cannoneers who prefer fire damage and protect themselves or their allies with Overwatch fire and prepared explosives."
