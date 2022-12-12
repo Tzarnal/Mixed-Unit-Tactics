@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>8f00bba4-d284-4c0b-b9a4-ea05d0ddee32</Guid>
+    <Name>MixedUnitTactics</Name>
+    <Description>Description of My XCOM 2 Mod.</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>MixedUnitTactics</AssemblyName>
+    <RootNamespace>MixedUnitTactics</RootNamespace>
+    <ProjectGuid>{044b7898-67af-49c3-9999-dff0f543b016}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+    <Folder Include="Config\Base\" />
+    <Folder Include="Localization\" />
+    <Folder Include="Src\" />
+    <Folder Include="Content\" />
+    <Folder Include="Src\MixedUnitTactics\" />
+    <Folder Include="Src\MixedUnitTactics\Classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\Base\XComClassData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\Base\XComGameData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\Base\XComPromotionUIMod.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="ModPreview.jpg" />
+    <Content Include="ContentOptions.json" />
+    <Content Include="Config\Base\XComEditor.ini" />
+    <Content Include="Config\Base\XComEngine.ini" />
+    <Content Include="Config\Base\XComGame.ini" />
+    <Content Include="Localization\XComGame.int" />
+    <Content Include="Localization\MixedUnitTactics.int" />
+    <Content Include="Src\extra_globals.uci" />
+    <Content Include="Src\MixedUnitTactics\Classes\MUT_GTS_Unlocks.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\MixedUnitTactics\Classes\UIStrategyScreenListener_MUT_GTS_Unlocks.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\MixedUnitTactics\Classes\X2Ability_MUT_Armiger_AbilitySet.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\MixedUnitTactics\Classes\X2Condition_WOTC_APA_TargetRankRequirement.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\MixedUnitTactics\Classes\X2DLCInfo_MixedUnitTactics.uc" />
+    <Content Include="Src\MixedUnitTactics\Classes\Help.uc" />
+    <Content Include="Src\MixedUnitTactics\Classes\ConfigEngine.uc" />
+    <Content Include="Src\MixedUnitTactics\Classes\X2Effect_WOTC_APA_AddAbilitiesToTarget.uc">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <SolutionRoot>$(MSBuildProjectDirectory)\..\</SolutionRoot>
+    <ScriptsDir>$(SolutionRoot).scripts\\</ScriptsDir>
+    <BuildCommonRoot>$(ScriptsDir)X2ModBuildCommon\</BuildCommonRoot>
+  </PropertyGroup>
+  <Import Project="$(BuildCommonRoot)XCOM2.targets" />
+</Project>
