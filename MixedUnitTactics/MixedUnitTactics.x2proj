@@ -53,7 +53,6 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\MixedUnitTactics\Classes\X2DLCInfo_MixedUnitTactics.uc" />
-    <Content Include="Src\MixedUnitTactics\Classes\Help.uc" />
     <Content Include="Src\MixedUnitTactics\Classes\ConfigEngine.uc" />
     <Content Include="Src\MixedUnitTactics\Classes\X2Effect_WOTC_APA_AddAbilitiesToTarget.uc">
       <SubType>Content</SubType>
