@@ -46,6 +46,9 @@
     <Content Include="Src\MixedUnitTactics\Classes\X2Ability_MUT_Armiger_AbilitySet.uc">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Src\MixedUnitTactics\Classes\X2Ability_MUT_Vulcan_AbilitySet.uc">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Src\MixedUnitTactics\Classes\X2Condition_WOTC_APA_TargetRankRequirement.uc">
       <SubType>Content</SubType>
     </Content>

@@ -28,17 +28,17 @@ static function X2AbilityTemplate MUT_ArmigerCore()
 	
 	// Establish Rank conditions for each Proficiency Level effect:
 	RankCondition1 = new class 'X2Condition_WOTC_APA_TargetRankRequirement';
-	RankCondition1.iMinRank = 1;	// No minimum rank for level 1 bonuses
-	RankCondition1.iMaxRank = 7;	// Max rank is 1 below minimum rank for level 2 bonuses
+	RankCondition1.iMinRank = 1;	
+	RankCondition1.iMaxRank = -1;	
 
 	RankCondition2 = new class 'X2Condition_WOTC_APA_TargetRankRequirement';
 	RankCondition2.iMinRank = 3;
-	RankCondition2.iMaxRank = 7;
+	RankCondition2.iMaxRank = -1;
 	RankCondition2.GiveProject = 'MUT_Armiger_Unlock1';
 	
 	RankCondition3 = new class 'X2Condition_WOTC_APA_TargetRankRequirement';
 	RankCondition3.iMinRank = 6;
-	RankCondition3.iMaxRank = 7;	// No max rank for level 3 bonuses
+	RankCondition3.iMaxRank = -1;	
 	RankCondition3.GiveProject = 'MUT_Armiger_Unlock2';
 	
 	RankAbilities1 = new class'X2Effect_WOTC_APA_AddAbilitiesToTarget';

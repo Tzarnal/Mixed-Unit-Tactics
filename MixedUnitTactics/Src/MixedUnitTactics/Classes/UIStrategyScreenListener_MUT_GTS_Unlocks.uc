@@ -6,7 +6,10 @@ event OnInit(UIScreen Screen)
     {
 		// Try to add the GTS perk
 		AddSoldierUnlockTemplate('OfficerTrainingSchool', 'MUT_Armiger_Unlock1');
-		AddSoldierUnlockTemplate('OfficerTrainingSchool', 'MUT_Armiger_Unlock2');		
+		AddSoldierUnlockTemplate('OfficerTrainingSchool', 'MUT_Armiger_Unlock2');
+
+		AddSoldierUnlockTemplate('OfficerTrainingSchool', 'MUT_Vulcan_Unlock1');
+		AddSoldierUnlockTemplate('OfficerTrainingSchool', 'MUT_Vulcan_Unlock2');
 	}
 }
 

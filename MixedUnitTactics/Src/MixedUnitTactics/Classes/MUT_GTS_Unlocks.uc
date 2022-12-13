@@ -7,6 +7,9 @@ static function array<X2DataTemplate> CreateTemplates()
 	Templates.AddItem(MUT_Armiger_Unlock1());
 	Templates.AddItem(MUT_Armiger_Unlock2());
 
+	Templates.AddItem(MUT_Vulcan_Unlock1());
+	Templates.AddItem(MUT_Vulcan_Unlock2());
+
 	return Templates;
 }
 
@@ -90,5 +93,68 @@ static function X2SoldierAbilityUnlockTemplate MUT_Armiger_Unlock2()
 }
 
 
+//
+//	Vulcan
+//
 
+function bool IsVulcanEnabled()
+{
+	return IsClassEnabled('MUT_Vulcan');
+}
+
+function bool IsVulcanUnlock1Purchased()
+{
+	local XComGameState_HeadquartersXCom XComHQ;
+
+	XComHQ = XComGameState_HeadquartersXCom(`XCOMHISTORY.GetSingleGameStateObjectForClass(class'XComGameState_HeadquartersXCom'));
+	if (IsVulcanEnabled() && XComHQ.SoldierUnlockTemplates.Find('MUT_Vulcan_Unlock1') != INDEX_NONE)
+	{
+		return true;
+	}
+		
+	return false;
+}
+
+static function X2SoldierAbilityUnlockTemplate MUT_Vulcan_Unlock1()
+{
+	local X2SoldierAbilityUnlockTemplate Template;
+
+	`CREATE_X2TEMPLATE(class'X2SoldierAbilityUnlockTemplate', Template, 'MUT_Vulcan_Unlock1');
+
+	// Requirements
+	Template.Requirements.bVisibleIfSoldierRankGatesNotMet = true;
+	Template.strImage = "img:///UILibrary_StrategyImages.GTS.GTS_SquadSize1";
+	Template.Requirements.SpecialRequirementsFn = IsVulcanEnabled;
+
+	Template.Requirements.RequiredHighestSoldierRank = 3;
+	Template.Requirements.RequiredSoldierClass = 'MUT_Vulcan';
+	Template.Requirements.RequiredSoldierRankClassCombo = true;
+
+	// Ability
+	Template.AbilityName = 'WOTC_APA_AcademyAbility';
+
+	return Template;
+}
+
+static function X2SoldierAbilityUnlockTemplate MUT_Vulcan_Unlock2()
+{
+	local X2SoldierAbilityUnlockTemplate Template;
+
+	`CREATE_X2TEMPLATE(class'X2SoldierAbilityUnlockTemplate', Template, 'MUT_Vulcan_Unlock2');
+
+	// Requirements
+	Template.bAllClasses = true;
+	Template.Requirements.bVisibleIfSoldierRankGatesNotMet = true;
+	Template.Requirements.SpecialRequirementsFn = IsVulcanUnlock1Purchased;
+
+	Template.Requirements.RequiredHighestSoldierRank = 6;
+	Template.Requirements.RequiredSoldierClass = 'MUT_Vulcan';
+	Template.Requirements.RequiredSoldierRankClassCombo = true;
+
+	// Ability
+	Template.AbilityName = 'WOTC_APA_AcademyAbility';
+	Template.strImage = "img:///UILibrary_StrategyImages.GTS.GTS_SquadSize2";
+	
+	return Template;
+}
 
